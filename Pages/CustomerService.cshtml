@@ -1,0 +1,36 @@
+@page
+@model Pergi.com.Pages.CustomerServiceModel
+@{
+    ViewData["Title"] = "Customer Service";
+}
+
+<div class="group">
+    <section id="service" class="service">
+        <h2><span>Customer</span>Service</h2>
+        <p>Hubungi kami untuk pertanyaan, kritik, atau saran. Kami siap membantu Anda dengan senang hati kapan saja!</p>
+
+        <ul>
+            <li>Email: support@pergi.com</li>
+            <li>Telepon: (0281) 123456</li>
+            <li>Live Chat: Senin–Jumat, 08.00–17.00</li>
+        </ul>
+
+        <form method="post" class="contact-form">
+            <div class="form-group">
+                <input asp-for="Name" placeholder="nama" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Email" type="email" placeholder="email" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Phone" placeholder="no hp" />
+            </div>
+            <button type="submit" class="submit-btn">KIRIM PESAN</button>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <p style="color:white; margin-top:10px">@Model.Message</p>
+        }
+    </section>
+</div>

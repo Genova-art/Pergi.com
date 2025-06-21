@@ -1,0 +1,61 @@
+@page
+@model UserModel
+@{
+    ViewData["Title"] = "Login & Register";
+}
+
+<div class="user-form">
+    <h2>@Model.FormTitle</h2>
+
+    <form method="post">
+        @if (Model.IsRegistering)
+        {
+            <div>
+                <label>Nama Lengkap</label>
+                <input asp-for="RegisterInput.FullName" required />
+            </div>
+            <div>
+                <label>Email</label>
+                <input asp-for="RegisterInput.Email" type="email" required />
+            </div>
+            <div>
+                <label>Password</label>
+                <input asp-for="RegisterInput.Password" type="password" required />
+            </div>
+        }
+        else
+        {
+            <div>
+                <label>Email</label>
+                <input asp-for="LoginInput.Email" type="email" required />
+            </div>
+            <div>
+                <label>Password</label>
+                <input asp-for="LoginInput.Password" type="password" required />
+            </div>
+        }
+
+        <input asp-for="IsRegistering" type="hidden" />
+        <button type="submit">@Model.ButtonText</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <p class="success">@Model.Message</p>
+    }
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <p class="error">@Model.ErrorMessage</p>
+    }
+
+    <p>
+        @if (Model.IsRegistering)
+        {
+            <a href="?login=true">Sudah punya akun? Login di sini</a>
+        }
+        else
+        {
+            <a href="?register=true">Belum punya akun? Daftar di sini</a>
+        }
+    </p>
+</div>

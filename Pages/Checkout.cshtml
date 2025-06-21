@@ -1,0 +1,22 @@
+@page
+@model CheckoutModel
+@{
+    ViewData["Title"] = "Checkout Pemesanan";
+}
+
+<link rel="stylesheet" href="~/css/checkout.css" />
+
+<div class="checkout-container">
+    <h2>Checkout Pemesanan</h2>
+
+    <p>Terima kasih, <strong>@Model.NamaPemesan</strong>. Pemesanan Anda di <strong>@Model.Hotel</strong> pada
+        <strong>@Model.TanggalCheckin.ToString("dd MMMM yyyy")</strong> berhasil!
+    </p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit">Download Struk (PDF)</button>
+    </form>
+
+    <a href="/Keranjang"><button type="button">Kembali ke Keranjang</button></a>
+</div>

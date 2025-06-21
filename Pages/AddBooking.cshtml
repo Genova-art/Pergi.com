@@ -1,0 +1,26 @@
+@page
+@model AddBookingModel
+@{
+    ViewData["Title"] = "Tambah Pemesanan";
+}
+
+<h2>Tambah Pemesanan</h2>
+
+<form method="post">
+    <label>Nama Pemesan</label>
+    <input asp-for="Nama" required />
+
+    <label>Email Pemesan</label>
+    <input asp-for="Email" required type="email" />
+
+    <label>Check-in</label>
+    <input asp-for="CheckIn" type="date" required />
+
+    <label>Hotel</label>
+    <input asp-for="Hotel" required />
+
+    <label>Harga</label>
+    <input asp-for="Harga" required />
+
+    <button type="submit">Simpan</button>
+</form>

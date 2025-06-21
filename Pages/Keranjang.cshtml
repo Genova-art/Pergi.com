@@ -1,0 +1,37 @@
+@page
+@model KeranjangModel
+@{
+    ViewData["Title"] = "Keranjang";
+}
+
+<h2>Keranjang Pemesanan</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Hotel</th>
+            <th>Nama Pemesan</th>
+            <th>Email</th>
+            <th>Check-in</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListPemesanan)
+        {
+            <tr>
+                <td>@item.Hotel</td>
+                <td>@item.NamaPemesan</td>
+                <td>@item.Email</td>
+                <td>@item.TanggalCheckin.ToString("dd MMMM yyyy")</td>
+                <td>@item.Harga</td>
+                <td>
+                    <a href="/EditPemesanan?id=@item.id">Edit</a> |
+                    <a href="/HapusPemesanan?id=@item.id" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a> |
+                    <a href="/Checkout?id=@item.id">Checkout</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

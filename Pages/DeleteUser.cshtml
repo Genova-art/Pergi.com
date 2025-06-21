@@ -1,0 +1,15 @@
+@page
+@model DeleteUserModel
+@{
+    ViewData["Title"] = "Hapus Akun";
+}
+
+<div class="profile-container">
+    <h2>Yakin ingin menghapus akun?</h2>
+    <p>Tindakan ini tidak bisa dibatalkan.</p>
+
+    <form method="post">
+        <button type="submit" class="danger">Ya, Hapus Akun</button>
+        <a href="/Profile"><button type="button">Batal</button></a>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+@page
+@model PemesananModel
+@{
+    ViewData["Title"] = "Pemesanan Hotel";
+}
+
+<section class="pemesanan-container">
+    <h2>Pemesanan Hotel: <span>@Model.HotelName</span></h2>
+    <p class="harga">Harga: <strong>IDR @Model.Harga</strong></p>
+
+    <form method="post" class="form-pemesanan">
+        <label>Nama Pemesan</label>
+        <input asp-for="NamaPemesan" required />
+
+        <label>Email</label>
+        <input asp-for="EmailPemesan" type="email" required />
+
+        <label>Tanggal Check-in</label>
+        <input asp-for="TanggalCheckIn" type="date" required />
+
+        <button type="submit">Pesan Sekarang</button>
+    </form>
+</section>

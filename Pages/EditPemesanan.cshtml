@@ -1,0 +1,30 @@
+@page "{id:int}"
+@model EditPemesananModel
+@{
+    ViewData["Title"] = "Edit Pemesanan";
+}
+
+<h2>Edit Pemesanan</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="id" />
+
+    <label>Hotel</label>
+    <input asp-for="Hotel" required />
+
+    <label>Nama Pemesan</label>
+    <input asp-for="NamaPemesan" required />
+
+    <label>Email</label>
+    <input asp-for="Email" type="email" required />
+
+    <label>Tanggal Check-in</label>
+    <input asp-for="TanggalCheckin" type="date" required />
+
+    <label>Harga</label>
+    <input asp-for="Harga" required />
+
+    <br /><br />
+    <button type="submit">Simpan</button>
+    <a href="/Keranjang"><button type="button">Batal</button></a>
+</form>

@@ -1,0 +1,38 @@
+@page
+@model PergiModel
+@{
+    ViewData["Title"] = "Petualangan dimulai";
+}
+
+<section class="menu">
+    <h2><span>Perga</span>Pergi</h2>
+    <p>Dari stasiun ke destinasi, semua jadi lebih praktis bareng PergaPergi! Yuk, booking hotelmu sekarang!!!</p>
+    <div class="row">
+        <div class="tiket">
+            <a asp-page="/Pemesanan" asp-route-hotel="Aston Hotel" asp-route-harga="906k">
+                <img src="../img/aston.jpg" alt="aston" />
+            </a>
+            <h3 class="tiket-title">Aston Hotel</h3>
+            <p class="tiket-price">IDR 906k</p>
+        </div>
+
+        <div class="tiket">
+            <a asp-page="/Pemesanan" asp-route-hotel="Luminor Hotel" asp-route-harga="735k">
+                <img src="../img/luminor.jpg" alt="aston"></a>
+            <h3 class="tiket-title">Luminor Hotel</h3>
+            <p class="tiket-price">IDR 735k</p>
+        </div>
+        <div class="tiket">
+            <a asp-page="/Pemesanan" asp-route-hotel="Java Heritage" asp-route-harga="880k">
+                <img src="../img/java.jpg" alt="aston"></a>
+            <h3 class="tiket-title">Java Heritage</h3>
+            <p class="tiket-price">IDR 880k</p>
+        </div>
+        <div class="tiket">
+            <a asp-page="/Pemesanan" asp-route-hotel="Grand Karlita" asp-route-harga="950k">
+                <img src="../img/grand.jpg" alt="aston"></a>
+            <h3 class="tiket-title">Grand Karlita</h3>
+            <p class="tiket-price">IDR 950k</p>
+        </div>
+    </div>
+</section>

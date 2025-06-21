@@ -1,0 +1,21 @@
+@page
+@model EditUserModel
+@{
+    ViewData["Title"] = "Edit Akun";
+}
+
+<div class="profile-container">
+    <h2>Edit Profil Akun</h2>
+
+    <form method="post">
+        <label>Nama Lengkap</label>
+        <input asp-for="FullName" />
+
+        <label>Email</label>
+        <input asp-for="Email" type="email" />
+
+        <br /><br />
+        <button type="submit">Simpan Perubahan</button>
+        <a href="/Profile"><button type="button">Batal</button></a>
+    </form>
+</div>

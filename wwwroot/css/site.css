@@ -1,0 +1,681 @@
+.navbar-brand {
+  font-size: 2rem;
+  color: #258cfb;
+  font-weight: 700;
+  font-family: 'poppins', sans-serif;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #258cfb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none; /* Ini menghilangkan underline */
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #1d6ed0;
+  color: #fff;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(217, 201, 201);
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand span {
+  color: #fffb03;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid #258cfb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+}
+
+.navbar .navbar-nav a {
+  color: #000000;
+  font-size: 1.2rem;
+  font-family: 'poppins', sans-serif;
+  display: inline-block;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #258cfb;
+  padding-bottom: 0,5rem;
+  border-bottom: 0.1rem solid var(#258cfb);
+  
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #258cfb;
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #000000;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #258cfb;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+
+main {
+  margin-top: 1rem; 
+}
+
+/* Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/tour.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255) 3%, rgba(255, 255, 255, 0) 25%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #258cfb;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #258cfb;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.privacy-page {
+  margin-top: 3rem; /* Atur sesuai tinggi navbar kamu */
+  padding: 2rem 7%;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px;
+}
+
+.tiket {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tiket:hover {
+  transform: scale(1.05);
+}
+
+
+.menu {
+  padding: 8rem 7% 1.4rem;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #258cfb;
+}
+
+.menu h2 span,
+.service h2 {
+  color: #fff;
+}
+
+.menu p {
+  text-align: justify;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .tiket {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+
+.menu .row .tiket img {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+
+.menu h3 {
+  color: #000000;
+}
+
+.menu .row .tiket .tiket-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.service {
+  padding: 8rem 7% 2rem;
+  text-align: center;
+}
+
+.service p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-weight: 300;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.service ul li {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Style */
+
+.group {
+  background-color: #84898f;
+  border-radius: 20px;
+  margin: 20px;
+  margin-top: 80px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border: 1px solid #fff;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.form-group i {
+  color: #fff;
+  margin-right: 0.8rem;
+  font-size: 1rem;
+}
+
+.form-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #258cfb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b6854a;
+}
+
+.pemesanan-container {
+  background-color: #f5f5f5;
+  padding: 3rem 5%;
+  max-width: 600px;
+  margin: 5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.pemesanan-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #258cfb;
+}
+
+.pemesanan-container h2 span {
+  color: #000;
+}
+
+.pemesanan-container .harga {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.form-pemesanan label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-pemesanan input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-pemesanan button {
+  background-color: #258cfb;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-pemesanan button:hover {
+  background-color: #147cd6;
+}
+
+/* Login & Register Style */
+.user-form {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.user-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #258cfb;
+}
+
+.user-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.user-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.user-form button {
+  width: 100%;
+  background-color: #258cfb;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-form button:hover {
+  background-color: #147cd6;
+}
+
+.user-form p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.user-form a {
+  color: #258cfb;
+  text-decoration: none;
+}
+
+.user-form a:hover {
+  text-decoration: underline;
+}
+
+.user-form .error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-form .success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container table {
+  width: 100%;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-container td {
+  padding: 10px 5px;
+}
+
+.profile-container button {
+  background-color: #258cfb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-container button:hover {
+  background-color: #1a6edb;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button.danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.danger:hover {
+  background-color: #c82333;
+}
+
+/* ===== Tampilan Tabel Keranjang ===== */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+table thead {
+  background-color: #f8f8f8;
+}
+
+table th, table td {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  font-weight: bold;
+  color: #333;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Tombol Aksi */
+table td a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #258cfb;
+  font-weight: bold;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+.checkout-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.checkout-container h2 {
+  color: #28a745;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.checkout-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.checkout-container form,
+.checkout-container a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.checkout-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-container button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.checkout-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.checkout-container button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.checkout-container button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+
+/* media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #c4bcbc;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.2s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rm;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* Mobile */ 
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+

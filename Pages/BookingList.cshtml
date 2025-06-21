@@ -1,0 +1,38 @@
+@page
+@model BookingListModel
+@{
+    ViewData["Title"] = "Daftar Pemesanan";
+}
+
+<h2>Daftar Pemesanan</h2>
+
+<a href="/AddBooking"><button>Tambah Pemesanan</button></a>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Nama Pemesan</th>
+            <th>Email</th>
+            <th>Check-in</th>
+            <th>Hotel</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Bookings)
+        {
+            <tr>
+                <td>@item.Nama</td>
+                <td>@item.Email</td>
+                <td>@item.CheckIn.ToString("yyyy-MM-dd")</td>
+                <td>@item.Hotel</td>
+                <td>@item.Harga</td>
+                <td>
+                    <a href="/EditBooking?id=@item.Id">Edit</a> |
+                    <a href="/DeleteBooking?id=@item.Id">Hapus</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

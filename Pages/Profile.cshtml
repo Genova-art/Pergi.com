@@ -1,0 +1,24 @@
+@page
+@model ProfileModel
+@{
+    ViewData["Title"] = "Profil Saya";
+}
+
+<div class="profile-container">
+    <h2>Profil Akun</h2>
+
+    <table>
+        <tr>
+            <td><strong>Nama:</strong></td>
+            <td>@Model.FullName</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>@Model.Email</td>
+        </tr>
+    </table>
+
+    <a href="/EditUser"><button>Edit Akun</button></a>
+    <a href="/DeleteUser"><button class="danger">Hapus Akun</button></a>
+
+</div>

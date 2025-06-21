@@ -1,0 +1,52 @@
+﻿@* File: /Pages/Shared/_Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Pergi.com</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">Pergi.<span>com</span></a>
+            <div class="navbar-nav">
+                <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                <a class="nav-link" asp-area="" asp-page="/CustomerService">Customer Service</a>
+                <a class="nav-link" asp-area="" asp-page="/Pergi">PergaPergi</a>
+            </div>
+            <div class="navbar-extra">
+                <a href="#" id="search"><i data-feather="search"></i></a>
+                <a asp-page="/Keranjang" id="Keranjang"><i data-feather="shopping-cart"></i></a>
+                <a asp-page="/User" id="user"><i data-feather="user"></i></a>
+                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 - Pergi.com - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script> feather.replace(); </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
