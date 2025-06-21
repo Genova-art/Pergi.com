@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pergi.com")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6c44c555d144c6fddae5f58bd28774c3cc05247")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pergi.com")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pergi.com")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -112,5 +112,6 @@ C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\refint\Pergi.com.dll
 C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\Pergi.com.pdb
 C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\Pergi.com.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\ref\Pergi.com.dll
-C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\compressed\0qaoy182vk-onuxr3869d.gz
 C:\Users\LENOVO\Desktop\Pergi.com\bin\Debug\net9.0\DinkToPdf.dll
+C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\Pergi.com.sourcelink.json
+C:\Users\LENOVO\Desktop\Pergi.com\obj\Debug\net9.0\compressed\0qaoy182vk-r1trqam9jn.gz
